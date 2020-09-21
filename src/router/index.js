@@ -15,14 +15,17 @@ export default new Router({
       component: HelloWorld
     },
     {
-      path: '/Login',
+      path: '/login',
       name: 'Login',
       component: Login
     },
     {
-      path: '/AppIndex',
+      path: '/index',
       name: 'AppIndex',
-      component: AppIndex
+      component: AppIndex,
+      meta: {
+        requireAuth: true
+      }
     }
   ]
 })
